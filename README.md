@@ -10,10 +10,10 @@ Outil d'auto-évaluation de la maturité cybersécurité destiné aux PME maroca
 
 - **Questionnaire structuré** : 22 questions fermées (Oui / Non / Je ne sais pas), réparties en 5 thèmes : gouvernance,
   sensibilisation, postes de travail et accès, protection des données, réseaux et gestion des incidents.
-- **Scoring automatique** — calcul d'un score global et d'un niveau de maturité (Débutant, Basique, Intermédiaire, Avancé), avec     un score détaillé par thème.
-- **Recommandations priorisées** — suggestions ciblées sur les thèmes les plus faibles.
-- **Rapport PDF** — génération d'un rapport complet (score, niveau, analyse par domaine, recommandations) prêt à être partagé avec   un dirigeant de PME sans expertise technique.
-- **Suivi dans le temps** — chaque évaluation est associée à une entreprise ; une nouvelle évaluation pour la même entreprise        affiche la comparaison avec le score précédent et un graphique d'évolution, à l'écran comme dans le rapport PDF.
+- **Scoring automatique** : calcul d'un score global et d'un niveau de maturité (Débutant, Basique, Intermédiaire, Avancé), avec     un score détaillé par thème.
+- **Recommandations priorisées** : suggestions ciblées sur les thèmes les plus faibles.
+- **Rapport PDF** : génération d'un rapport complet (score, niveau, analyse par domaine, recommandations) prêt à être partagé avec   un dirigeant de PME sans expertise technique.
+- **Suivi dans le temps** : chaque évaluation est associée à une entreprise ; une nouvelle évaluation pour la même entreprise        affiche la comparaison avec le score précédent et un graphique d'évolution, à l'écran comme dans le rapport PDF.
 
 ## Structure du projet
 
