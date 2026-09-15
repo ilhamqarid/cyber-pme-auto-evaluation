@@ -3,6 +3,8 @@
 Outil d'auto-évaluation de la maturité cybersécurité pour les PME
 marocaines, développé dans le cadre d'un stage (CMPRI, été 2026), basé sur
 le guide de bonnes pratiques **CMRPI/AUSIM**.
+<img width="937" height="907" alt="image" src="https://github.com/user-attachments/assets/bfda0eae-00ae-4526-9c05-103ce1242618" />
+
 
 ## Ce que fait l'application
 
@@ -20,11 +22,12 @@ le guide de bonnes pratiques **CMRPI/AUSIM**.
   évaluation pour la même entreprise, l'application affiche la comparaison
   avec le score précédent et un graphique d'évolution, à l'écran comme dans
   le rapport PDF.
+<img width="639" height="803" alt="image" src="https://github.com/user-attachments/assets/fb5720a0-db1b-4fc4-b58b-b37bf9a12192" />
 
 ## Stack technique
 
 Python, Streamlit (interface), ReportLab (génération PDF), SQLite
-(historique des évaluations — module standard `sqlite3`, aucune dépendance
+(historique des évaluations , module standard `sqlite3`, aucune dépendance
 supplémentaire).
 
 ## Installation locale
@@ -41,7 +44,7 @@ La base `historique.db` est créée automatiquement au premier lancement.
 Ce projet a été réalisé dans le cadre d'un stage de 6 semaines (3 jalons de
 15 jours), avec un périmètre volontairement limité : questionnaire simple,
 scoring basique, pas de comparaison à une norme internationale (ISO 27001,
-NIST), pas de développement full-stack — ces choix sont documentés dans le
+NIST), pas de développement full-stack ces choix sont documentés dans le
 cahier des charges du stage et assumés comme tels.
 
 **Le suivi des évaluations dans le temps** (module `historique.py`) a été
@@ -57,5 +60,5 @@ pendant le stage.
   de compte/authentification) : deux entreprises avec un nom identique
   partageraient le même historique.
 - Le scoring reste volontairement simple (comptage de bonnes pratiques),
-  sans pondération par criticité — cohérent avec le périmètre initial du
+  sans pondération par criticité cohérent avec le périmètre initial du
   stage.
