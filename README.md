@@ -1,34 +1,52 @@
-# Cyber PME — Auto-évaluation cybersécurité
+# 🛡️ Cyber PME : Auto-évaluation de la maturité cybersécurité
 
-Outil d'auto-évaluation de la maturité cybersécurité pour les PME
-marocaines, développé dans le cadre d'un stage (CMPRI, été 2026), basé sur
-le guide de bonnes pratiques **CMRPI/AUSIM**.
-<img width="937" height="907" alt="image" src="https://github.com/user-attachments/assets/bfda0eae-00ae-4526-9c05-103ce1242618" />
+Outil d'auto-évaluation de la maturité cybersécurité destiné aux PME
+marocaines, développé dans le cadre d'un stage à distance (CMRPI / Espace Maroc
+Cyberconfiance, été 2026), basé sur le **Guide de bonnes pratiques
+cybersécurité des PME au Maroc (CMRPI/AUSIM)**.
+
+**Stack :** Python · Streamlit · ReportLab · SQLite
 
 
-## Ce que fait l'application
+<img width="937" height="907" alt="image" src="https://github.com/user-attachments/assets/5c3a5216-3b25-4fb7-aea4-4b54a8bf2b12" />
 
-- Questionnaire de 22 questions fermées (Oui / Non / Je ne sais pas),
-  réparties en 5 thèmes : gouvernance, sensibilisation, postes de travail
-  et accès, protection des données, réseaux et gestion des incidents.
-- Calcul d'un score global et d'un niveau de maturité (Débutant, Basique,
-  Intermédiaire, Avancé).
-- Score détaillé par thème, avec recommandations prioritaires ciblées sur
-  les points les plus faibles.
-- Génération d'un rapport PDF complet (score, niveau, analyse par domaine,
-  recommandations).
-- **Suivi de l'évolution dans le temps** : chaque évaluation est associée à
-  une entreprise (par nom) et enregistrée localement. Lors d'une nouvelle
-  évaluation pour la même entreprise, l'application affiche la comparaison
-  avec le score précédent et un graphique d'évolution, à l'écran comme dans
-  le rapport PDF.
-<img width="639" height="803" alt="image" src="https://github.com/user-attachments/assets/fb5720a0-db1b-4fc4-b58b-b37bf9a12192" />
 
-## Stack technique
+---
 
-Python, Streamlit (interface), ReportLab (génération PDF), SQLite
-(historique des évaluations , module standard `sqlite3`, aucune dépendance
-supplémentaire).
+## Fonctionnalités
+
+- **Questionnaire structuré** : 22 questions fermées (Oui / Non / Je ne
+  sais pas), réparties en 5 thèmes : gouvernance, sensibilisation, postes
+  de travail et accès, protection des données, réseaux et gestion des
+  incidents.
+- **Scoring automatique** : calcul d'un score global et d'un niveau de
+  maturité (Débutant, Basique, Intermédiaire, Avancé), avec un score
+  détaillé par thème.
+- **Recommandations priorisées** : suggestions ciblées sur les thèmes les
+  plus faibles.
+- **Rapport PDF** : génération d'un rapport complet (score, niveau,
+  analyse par domaine, recommandations) prêt à être partagé avec un
+  dirigeant de PME sans expertise technique.
+- **Suivi dans le temps** : chaque évaluation est associée à une
+  entreprise ; une nouvelle évaluation pour la même entreprise affiche la
+  comparaison avec le score précédent et un graphique d'évolution, à
+  l'écran comme dans le rapport PDF.
+
+<img width="937" height="907" alt="image" src="https://github.com/user-attachments/assets/6783a9a5-33e4-4ff7-973a-38d3a31066f9" />
+
+
+## Structure du projet
+
+```
+cybersecurity_pme_updated/
+├── app.py              # Interface Streamlit
+├── questionnaire.py     # Questions, thèmes, scoring, recommandations
+├── historique.py        # Suivi des évaluations dans le temps (SQLite)
+├── rapport_pdf.py        # Génération du rapport PDF (ReportLab)
+├── assets/               # Logos CMRPI / EMC
+├── requirements.txt
+└── .gitignore
+```
 
 ## Installation locale
 
@@ -37,28 +55,28 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-La base `historique.db` est créée automatiquement au premier lancement.
+La base `historique.db` est créée automatiquement au premier lancement et
+n'est pas versionnée (voir `.gitignore`).
 
-## Note sur le périmètre du projet
+## Contexte du projet
 
-Ce projet a été réalisé dans le cadre d'un stage de 6 semaines (3 jalons de
-15 jours), avec un périmètre volontairement limité : questionnaire simple,
-scoring basique, pas de comparaison à une norme internationale (ISO 27001,
-NIST), pas de développement full-stack ces choix sont documentés dans le
-cahier des charges du stage et assumés comme tels.
-
-**Le suivi des évaluations dans le temps** (module `historique.py`) a été
-ajouté après le stage, en reprenant une extension explicitement suggérée
-par le cahier des charges ("ajouter un suivi des scores dans le temps pour
-une même PME"). Le reste de l'application correspond au livrable produit
-pendant le stage.
+Réalisé en 6 semaines (3 jalons de 15 jours) dans le cadre d'un stage chez
+CMRPI / Espace Maroc Cyberconfiance, ce projet s'appuie sur un référentiel
+unique et reconnu le guide CMRPI/AUSIM , pour livrer un outil concret,
+directement utilisable par des dirigeants de PME sans expertise technique.
+Le choix d'une stack légère (Streamlit, ReportLab, SQLite) a permis d'aller
+du questionnaire au rapport PDF final en un temps court, avec un prototype
+fonctionnel de bout en bout dès la fin du stage.
 
 ## Limites connues
 
 - Pas de tests automatisés à ce stade.
-- L'identification d'une entreprise se fait par son nom saisi librement (pas
-  de compte/authentification) : deux entreprises avec un nom identique
-  partageraient le même historique.
+- L'identification d'une entreprise se fait par son nom saisi librement
+  (pas de compte/authentification) : deux entreprises avec un nom
+  identique partageraient le même historique.
 - Le scoring reste volontairement simple (comptage de bonnes pratiques),
-  sans pondération par criticité cohérent avec le périmètre initial du
-  stage.
+  sans pondération par criticité.
+
+## Auteure
+
+Ilham Qarid Élève-ingénieure en Génie Informatique, ENSA Fès
