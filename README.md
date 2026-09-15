@@ -8,7 +8,8 @@ cybersécurité des PME au Maroc (CMRPI/AUSIM)**.
 **Stack :** Python · Streamlit · ReportLab · SQLite
 
 
-<img width="937" height="907" alt="image" src="https://github.com/user-attachments/assets/5c3a5216-3b25-4fb7-aea4-4b54a8bf2b12" />
+<img width="937" height="907" alt="image" src="https://github.com/user-attachments/assets/99f73138-ec8a-46e5-8c76-d665577a827f" />
+
 
 
 ---
@@ -32,7 +33,8 @@ cybersécurité des PME au Maroc (CMRPI/AUSIM)**.
   comparaison avec le score précédent et un graphique d'évolution, à
   l'écran comme dans le rapport PDF.
 
-<img width="937" height="907" alt="image" src="https://github.com/user-attachments/assets/6783a9a5-33e4-4ff7-973a-38d3a31066f9" />
+<img width="639" height="803" alt="image" src="https://github.com/user-attachments/assets/cf3bc734-3ed0-48e1-ac69-13f0e97d924d" />
+
 
 
 ## Structure du projet
